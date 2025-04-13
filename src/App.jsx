@@ -8,6 +8,8 @@ import TextPressure from './components/TextPressure';
 import SpotlightCard from './components/SpotlightCard';
 import ExploreButton from './components/ExploreButton';
 import AboutUs from './components/AboutUs.jsx';
+import ImageGenerator from './components/imageGenerator.jsx';
+import GeminiPrompt from './components/geminiPrompt.jsx';
 
 const MainContent = () => {
   const location = useLocation();
@@ -32,6 +34,8 @@ const MainContent = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/image-generator" element={<ImageGenerator />} />
+          <Route path="/chatbot" element={<GeminiPrompt />} />
         </Routes>
       </main>
     </div>
