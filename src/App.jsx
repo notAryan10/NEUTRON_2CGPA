@@ -10,6 +10,7 @@ import ExploreButton from './components/ExploreButton';
 import AboutUs from './components/AboutUs.jsx';
 import ImageGenerator from './components/imageGenerator.jsx';
 import GeminiPrompt from './components/geminiPrompt.jsx';
+import CodeWriter from './components/codeWriter.jsx';
 
 const MainContent = () => {
   const location = useLocation();
@@ -36,6 +37,7 @@ const MainContent = () => {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/image-generator" element={<ImageGenerator />} />
           <Route path="/chatbot" element={<GeminiPrompt />} />
+          <Route path="/code-writer" element={<CodeWriter />} />
         </Routes>
       </main>
     </div>

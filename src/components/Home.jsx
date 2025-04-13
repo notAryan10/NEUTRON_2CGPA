@@ -93,7 +93,7 @@ const Home = () => {
             </div>
             <div className="mt-auto">
               <button
-                onClick={() => navigate('/chatbot')}
+                onClick={() => navigate('/code-writer')}
                 className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 
                          hover:from-blue-700 hover:to-cyan-700 
                          text-white py-3 px-6 rounded-lg font-medium
