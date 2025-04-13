@@ -6,7 +6,7 @@ const Freeminded = () => {
 
   return (
     <div className="container mx-auto px-6 py-8 min-h-screen">
-      <div className="max-w-7xl mx-auto mt-32">
+      <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-8 text-center">
           Free Minded Tools
         </h1>

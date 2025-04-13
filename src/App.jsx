@@ -1,15 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/navbar.jsx";
-import ImageGenerator from "./components/imageGenerator.jsx";
 import Home from "./components/Home.jsx";
 import "./App.css";
-import GeminiPrompt from "./components/geminiPrompt.jsx";
 import Aurora from "./components/Aurora.jsx";
 import TextPressure from './components/TextPressure';
 import SpotlightCard from './components/SpotlightCard';
 import ExploreButton from './components/ExploreButton';
-import Freeminded from './components/Freeminded';
+import AboutUs from './components/AboutUs';
 
 const MainContent = () => {
   const location = useLocation();
@@ -33,9 +31,7 @@ const MainContent = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/image-generator" element={<ImageGenerator />} />
-          <Route path="/chatbot" element={<GeminiPrompt />} />
-          <Route path="/freeminded" element={<Freeminded />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
       </main>
     </div>

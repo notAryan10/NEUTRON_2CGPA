@@ -39,7 +39,7 @@ const ImageGenerator = () => {
   return (
     <div className="h-full flex flex-col md:flex-row p-6 pt-12 gap-6">
       <div className="md:w-1/3 flex flex-col gap-6">
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+        <div className="backdrop-blur-md bg-white/30 dark:bg-gray-800/30 rounded-xl shadow-lg p-6 border border-white/20 dark:border-gray-700/30">
           <h1 className="text-3xl font-bold mb-2 text-gray-800 dark:text-white">AI Image Generator</h1>
           <p className="text-gray-600 dark:text-gray-300 mb-6">Transform your ideas into stunning visuals</p>
           
