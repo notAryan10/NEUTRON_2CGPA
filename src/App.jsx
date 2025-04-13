@@ -7,7 +7,7 @@ import Aurora from "./components/Aurora.jsx";
 import TextPressure from './components/TextPressure';
 import SpotlightCard from './components/SpotlightCard';
 import ExploreButton from './components/ExploreButton';
-import AboutUs from './components/AboutUs';
+import AboutUs from './components/AboutUs.jsx';
 
 const MainContent = () => {
   const location = useLocation();

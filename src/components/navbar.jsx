@@ -7,6 +7,8 @@ import FuzzyText from './FuzzyText';
 
 function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
+  const [hoverIntensity] = useState(0.5);
+  const [enableHover] = useState(true);
 
   useEffect(() => {
     const savedDarkMode = localStorage.getItem('darkMode');
@@ -38,8 +40,8 @@ function Navbar() {
           <div className="text-lg font-semibold text-white">
             <FuzzyText 
               baseIntensity={0.2} 
-              hoverIntensity={0.5} 
-              enableHover={true}
+              hoverIntensity={hoverIntensity} 
+              enableHover={enableHover}
               fontSize="2rem"
             >
               2CGPA
