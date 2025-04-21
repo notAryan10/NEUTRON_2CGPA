@@ -56,14 +56,6 @@ npm run dev
 - Customize the cursor effects in the settings
 - Adjust animation preferences in the configuration
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - Gemini AI for the chatbot capabilities
