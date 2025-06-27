@@ -7,7 +7,7 @@
 - **AI Image Generator**: Transform your ideas into stunning visuals using advanced AI technology
 - **AI Chatbot**: Engage in intelligent conversations powered by Gemini AI
 - **Code Writer**: Get AI assistance for your programming needs
-- **Modern UI**: Beautiful, responsive design with dark mode support
+- **Modern UI**: Beautiful, responsive design with dark mode support.
 - **Interactive Elements**: Custom cursor effects, typewriter animations, and more
 
 ## 🛠️ Tech Stack
