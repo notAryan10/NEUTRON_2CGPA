@@ -24,7 +24,7 @@ const generateImage = async (prompt, maxRetries = 3) => {
 
   while (retryCount < maxRetries) {
     try {
-      const response = await fetch("https://api.stability.ai/v1/generation/stable-diffusion-v1-6/text-to-image", {
+      const response = await fetch("https://api.stability.ai/v2beta/stable-image/generate/sd3", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${apiKey}`,
