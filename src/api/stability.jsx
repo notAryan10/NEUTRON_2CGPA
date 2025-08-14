@@ -24,24 +24,23 @@ const generateImage = async (prompt, maxRetries = 3) => {
 
   while (retryCount < maxRetries) {
     try {
-      const response = await fetch("https://api.stability.ai/v1/generation/stable-diffusion-v1-6/text-to-image", {
+      const formData = new FormData();
+      formData.append("prompt", prompt);
+      formData.append("output_format", "png");
+
+      const response = await fetch("https://api.stability.ai/v2beta/stable-image/generate/sd3", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          Accept: "application/json",
+          // Do NOT set Content-Type here!
         },
-        body: JSON.stringify({
-          text_prompts: [{ text: prompt }],
-          cfg_scale: 7,
-          height: 512,
-          width: 512,
-          samples: 1,
-          steps: 30,
-        }),
+        body: formData,
       });
 
       if (!response.ok) {
+        const errorBody = await response.text();
+        console.error("API error response:", errorBody);
         if (response.status === 401) {
           throw new Error("Authentication failed. Please check your Stability AI API key in the .env file.");
         } else if (response.status === 429) {
@@ -61,8 +60,8 @@ const generateImage = async (prompt, maxRetries = 3) => {
 
       const data = await response.json();
 
-      if (data?.artifacts?.length > 0) {
-        return `data:image/png;base64,${data.artifacts[0].base64}`;
+      if (data?.image) {
+        return `data:image/png;base64,${data.image}`;
       } else {
         throw new Error("No image was generated. Please try again with a different prompt.");
       }
