@@ -61,7 +61,7 @@ const CodeWriter = () => {
               <div className="mt-6">
                 <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white text-center">Generated Code:</h3>
                 <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4">
-                  <pre className="whitespace-pre-wrap text-gray-800 dark:text-gray-200 font-mono">
+                  <pre className="whitespace-pre-wrap text-left text-gray-800 dark:text-gray-200 font-mono">
                     {displayedOutput}
                     {isTyping && (
                       <span className="inline-block w-2 h-5 ml-1 bg-blue-500 dark:bg-yellow-400 animate-pulse"/>
