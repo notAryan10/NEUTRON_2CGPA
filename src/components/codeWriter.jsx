@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { generatePrompts } from '../api/gemini';
+import ReactMarkdown from "react-markdown";
 
 const CodeWriter = () => {
   const [prompt, setPrompt] = useState('');
@@ -57,19 +58,24 @@ const CodeWriter = () => {
             >
               {isTyping ? "Generating Code..." : "Generate Code"}
             </button>
-            {(displayedOutput || geminiOutput === "Generating...") && (
-              <div className="mt-6">
-                <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white text-center">Generated Code:</h3>
-                <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4">
-                  <pre className="whitespace-pre-wrap text-left text-gray-800 dark:text-gray-200 font-mono">
-                    {displayedOutput}
+
+              {(displayedOutput || geminiOutput === "Generating...") && (
+                <div className="mt-6">
+                  <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white text-center">
+                    Generated Code:
+                  </h3>
+                  <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4">
+                    <div className="text-left prose dark:prose-invert max-w-none">
+                      <ReactMarkdown>
+                        {displayedOutput}
+                      </ReactMarkdown>
+                    </div>
                     {isTyping && (
-                      <span className="inline-block w-2 h-5 ml-1 bg-blue-500 dark:bg-yellow-400 animate-pulse"/>
+                      <span className="inline-block w-2 h-5 ml-1 bg-blue-500 dark:bg-yellow-400 animate-pulse" />
                     )}
-                  </pre>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
           </div>
         </div>
       </div>
